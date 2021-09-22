@@ -13,11 +13,23 @@ namespace CompGraf2
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private Form2 main;
+        public Form1(Form2 form2)
         {
+            main = form2;
             InitializeComponent();
         }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         private Bitmap imR, imB, imG, histR, histB, histG;
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            main.Visible = true;
+            this.Visible = false;
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
