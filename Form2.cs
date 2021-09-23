@@ -14,7 +14,7 @@ namespace CompGraf2
     {
         private Form1 form1;
         private Form3 form3;
-        //private Form4 form4;
+        private Form4 form4;
         public Form2()
         {
             InitializeComponent();
@@ -22,8 +22,8 @@ namespace CompGraf2
             form1.Visible = false;
             form3 = new Form3(this);
             form3.Visible = false;
-            //form4 = new Form4(this);
-            //form4.Visible = false;
+            form4 = new Form4(this);
+            form4.Visible = false;
         }        
         private void button2_Click(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace CompGraf2
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            //form4.Visible = true;
+            form4.Visible = true;
         }
     }
 }
